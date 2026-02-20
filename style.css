@@ -10,7 +10,7 @@
   /* --secondary: linear-gradient(var(--primary), transparent); */
   --text-color: #444;
   --link-color: #666;
-
+  --black : rgb(0, 0, 0) ; 
 }
 
 body {
@@ -35,6 +35,11 @@ header {
 header,
 hgroup {
   margin-bottom: 1em;
+}
+
+header > hgroup > h1 {
+  padding : 0.25em 0; 
+  font-size: 30px;
 }
 
 nav {
@@ -94,12 +99,12 @@ h2,
 h3,
 h4 {
   padding-bottom: 0.25em;
-  color: black;
+  color: var(--black);
 }
 
 body > footer {  
   padding: 1em 8em;
-  color : black; 
+  color : var(--black); 
   background-color: var(--secondary);
   border-top: 3px solid var(--secondary);
 }
@@ -109,20 +114,33 @@ img {
 }
 
 aside {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   padding: 0.5em 1em;
   color: var(--text-color);
   height: 100%;
 }
 
 aside > p {
-  color : black; 
+  color : var(--black); 
   text-decoration: underline;
+}
+
+details > summary {
+  border: 1px solid var(--secondary);
+  padding : 0.25em 0.35em; 
+  border-radius: 2px;
+  background-color: rgb(223, 221, 221); 
+  color: black;
+  width : 230px; 
+}
+
+details > p {
+  color: var(--link-color);
 }
 
 dialog {
   bottom: 10px;
-  box-shadow: 1px solid black;
+  box-shadow: 1px solid var(--black);
   margin: 1em auto;
   padding: 0.25em;
 }
